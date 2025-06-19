@@ -4,89 +4,102 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Font Variables */
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-body: var(--font-sans);
+    --font-heading: var(--font-sans);
+
+    /* Color Variables - Light Mode */
+    --background: 0 0% 100%; /* White */
+    --foreground: 220 15% 20%; /* Dark Gray for text (e.g., #2D323D) */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%; /* Calm Blue (e.g., #3B82F6) */
+    --primary-foreground: 210 40% 98%; /* Light Gray/White */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 20% 94%; /* Subtle Light Gray-Blue (e.g., #E9ECF2) */
+    --secondary-foreground: 220 15% 30%; /* Darker Gray for text on secondary (e.g., #404653) */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 96%; /* Very Light Gray (e.g., #F0F2F5) */
+    --muted-foreground: 220 10% 45%; /* Medium Gray (e.g., #676C7C) */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 80% 65%; /* Softer/Brighter Blue for links (e.g., #5999F8) */
+    --accent-foreground: 210 40% 98%; /* Text on accent - assuming accent is dark enough */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%; /* Red (e.g., #EF4444) */
+    --destructive-foreground: 0 0% 98%; /* Light Gray/White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 20% 88%; /* Light Gray border (e.g., #D6DCE6) */
+    --input: 220 20% 88%; /* Matches border */
+    --ring: 217 91% 60%; /* Primary blue for focus rings */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* Existing: 8px, meets 4-8px requirement */
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Variables - Light Mode */
+    --sidebar-background: 220 20% 98%; /* Very light gray-blue (e.g., #F5F7FA) */
+    --sidebar-foreground: 220 15% 25%; /* Dark text (e.g., #333945) */
+    --sidebar-primary: 217 91% 55%; /* Slightly darker primary for sidebar (e.g., #2F72E0) */
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 80% 60%; /* (e.g., #478DE4) */
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 20% 90%; /* (e.g., #DFE3EB) */
+    --sidebar-ring: 217 91% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Color Variables - Dark Mode */
+    --background: 220 20% 10%; /* Dark Slate Blue (e.g., #13171F) */
+    --foreground: 220 15% 90%; /* Light Gray text (e.g., #DCE0E8) */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 20% 13%; /* Slightly lighter dark (e.g., #1A1F29) */
+    --card-foreground: 220 15% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 13%;
+    --popover-foreground: 220 15% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 91% 65%; /* Brighter Blue for dark mode (e.g., #5999F8) */
+    --primary-foreground: 220 20% 15%; /* Darker text for contrast on primary (e.g., #1E2430) */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 20%; /* Darker Gray-Blue (e.g., #262A33) */
+    --secondary-foreground: 220 15% 85%; /* Lighter Gray (e.g., #CAD0D9) */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 22%; /* Slightly Lighter Dark Gray (e.g., #2D323D) */
+    --muted-foreground: 220 10% 60%; /* Medium Gray (e.g., #8C92A1) */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 217 80% 70%; /* Even brighter blue for links (e.g., #79AAF9) */
+    --accent-foreground: 220 20% 15%; /* Dark text, as accent is light */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 60%; /* Brighter Red for dark mode (e.g., #F36363) */
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 15% 25%; /* Dark Gray border (e.g., #333945) */
+    --input: 220 15% 25%;
+    --ring: 217 91% 65%; /* Primary blue (dark mode version) for focus rings */
+
+    /* Sidebar Variables - Dark Mode */
+    --sidebar-background: 220 20% 8%; /* Very dark base for sidebar (e.g., #0F121A) */
+    --sidebar-foreground: 220 15% 88%; /* (e.g., #D3D8E2) */
+    --sidebar-primary: 217 91% 60%; /* (e.g., #3B82F6) */
+    --sidebar-primary-foreground: 220 20% 12%; /* (e.g., #161A24) */
+    --sidebar-accent: 217 80% 65%; /* (e.g., #5999F8) */
+    --sidebar-accent-foreground: 220 20% 12%;
+    --sidebar-border: 220 15% 20%; /* (e.g., #262A33) */
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer utilities {
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
   }
 }
 
@@ -96,6 +109,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body; /* Apply body font by default */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading; /* Apply heading font to heading elements */
   }
 }
