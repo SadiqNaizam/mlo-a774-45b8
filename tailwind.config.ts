@@ -68,6 +68,10 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+        // Added 'sans' to reference the CSS variable for 'Inter' font family
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
